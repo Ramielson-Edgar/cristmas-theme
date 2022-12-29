@@ -84,7 +84,7 @@ h3,
 
 .christmas-section {
   position: relative;
-  background: url("../img/svg-bg.svg"), linear-gradient(292deg, rgb(1, 133, 255) 42%, rgb(249, 250, 255) 42%);
+  background: linear-gradient(292deg, rgb(1, 133, 255) 42%, rgb(249, 250, 255) 42%);
   background-repeat: repeat-x, no-repeat;
   background-position: center right, center right;
   background-size: contain, contain;
@@ -94,15 +94,15 @@ h3,
 }
 .christmas-section::before {
   position: absolute;
-  top: -100px;
-  right: -60px;
+  top: -60px;
+  right: -370px;
   display: block;
   content: "";
   width: 100%;
   height: 750px;
-  background-image: url("../img/bg-2.png");
+  background-image: url("/img/bg-3.png");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center;
   background-size: contain;
   z-index: 2;
 }
@@ -115,7 +115,7 @@ h3,
 }
 
 .christmas-section__title {
-  font-size: clamp(1.13rem, 0.53rem + 2.54vw, 2.5rem);
+  font-size: clamp(1.13rem, 0.8rem + 1.39vw, 1.88rem);
 }
 
 .christmas-section__description,
@@ -124,7 +124,7 @@ h3,
 }
 
 .christmas-section__description {
-  font-size: clamp(1rem, 0.95rem + 0.23vw, 1.13rem);
+  font-size: 1rem;
   color: #6A6A6A;
 }
 
@@ -148,106 +148,72 @@ h3,
   z-index: 30;
 }
 
-@media (min-width: 1920px) {
-  .christmas-section::before {
-    position: absolute;
-    top: 290px;
-    left: 700px;
-    transform: translate(-50%, -50%);
-    display: block;
-    content: "";
-    width: 100%;
-    height: 750px;
-  }
-}
 @media (max-width: 1198px) {
   .christmas-section__title {
-    font-size: 30px;
+    font-size: 27px;
   }
   .christmas-section__description {
     font-size: 1rem;
   }
-  .christmas-section__image {
-    max-width: 80%;
-    display: block;
-    height: auto;
-  }
-  .christmas-section__offer {
-    max-width: 340px;
-  }
   .christmas-section::before {
-    right: -80px;
+    height: 850px;
   }
 }
 @media (max-width: 991.98px) {
-  .christmas-section__title {
-    font-size: clamp(1.13rem, 0.53rem + 2.54vw, 2.5rem);
-  }
-  .christmas-section__description {
-    font-size: clamp(1rem, 0.95rem + 0.23vw, 1.13rem);
-    color: #6A6A6A;
-  }
   .christmas-section {
     position: relative;
-    background: url("../img/new-year-bg-991.png") #F9FAFF;
-    background-repeat: no-repeat;
-    background-position: center top -100px;
-    background-size: contain;
+    background: linear-gradient(187deg, rgb(1, 133, 255) 40%, rgb(249, 250, 255) 40%);
+    background-repeat: repeat-x, no-repeat;
+    background-position: center right, center right;
+    background-size: contain, contain;
+    margin: 10px;
+    border-radius: 20px;
+    z-index: 1;
   }
   .christmas-section::before {
     position: absolute;
-    top: 0;
+    top: -150px;
     right: 0;
     display: block;
     content: "";
     width: 100%;
     height: 750px;
-    background-image: url("../img/bg-2-375.png");
+    background-image: url("/img/bg-3-991.png");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
     background-size: contain;
     z-index: 2;
   }
   .christmas-section__image {
     display: block;
     margin-inline: auto;
-    margin-top: calc(2vw + 30%);
+    padding-top: 30%;
   }
 }
 @media (max-width: 575.98px) {
-  .christmas-section__innner {
-    padding: 0;
-  }
-  .section-padding {
-    padding: 50px 0;
-  }
-  .christmas-section {
-    background-position: center top;
-    background-size: contain;
-    margin: 5px;
-  }
-  .christmas-section__image {
-    width: 60%;
-    margin-top: calc(1vw + 30%);
-  }
   .christmas-section__header {
     text-align: center;
   }
-  .btn-small {
-    padding: 10px 30px;
-  }
   .christmas-section__lst {
-    justify-items: center;
+    max-width: 220px;
+    margin-inline: auto;
+  }
+  .christmas-section {
+    background: linear-gradient(187deg, rgb(1, 133, 255) 25%, rgb(249, 250, 255) 25%);
   }
   .christmas-section-logo {
     display: none;
   }
-  .christmas-section__offer {
-    max-width: 100%;
+  .christmas-section__image {
+    display: block;
+    max-width: 60%;
+    height: auto;
+    padding-top: 0;
+    margin-top: 20%;
   }
-}
-@media (max-width: 375px) {
-  .christmas-section::before {
-    top: 0;
+  .christmas-section:before {
+    top: -30%;
+    right: 0;
+    background-image: url("/img/bg-3-375.png");
   }
 }/*# sourceMappingURL=styles.css.map */
