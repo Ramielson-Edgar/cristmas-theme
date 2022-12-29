@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
 body {
-  font-weight: 400;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 30px;
+  color: #1C1C1C;
 }
 
 h1,
@@ -13,13 +14,26 @@ p {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
 .text-bold {
   text-transform: capitalize;
   font-weight: 700;
 }
 
+.text-gradient {
+  color: #1E88E5;
+}
+
 .section-padding {
-  padding: 70px 0;
+  padding: 50px 0;
+}
+
+.christmas-section__lst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .btn-base {
@@ -37,12 +51,22 @@ p {
 }
 .btn-base:focus, .btn-base:hover {
   color: #fff;
-  transform: translateY(-10px);
+  transform: translateY(-7px);
   text-decoration: none;
 }
 
 .btn-small {
   padding: 10px 40px;
+}
+
+.btn-blue-light {
+  color: #fff;
+  background-color: #1E88E5;
+}
+.btn-blue-light:focus, .btn-blue-light:hover {
+  color: #1E88E5;
+  border: 1px solid #1E88E5;
+  background-color: transparent;
 }
 
 .btn-green-red {
@@ -53,96 +77,158 @@ p {
   background-color: #F34B4B;
 }
 
-.btn-red-green {
-  color: #fff;
-  background-color: #F34B4B;
-}
-.btn-red-green:focus, .btn-red-green:hover {
-  background-color: #47DFC5;
+.christmas-section__innner {
+  overflow: hidden;
 }
 
 .christmas-section {
-  overflow: hidden;
-  background: url("../img/100-deposit-bg-top.png"), url("../img/100-deposit-bg-bottom.jpg"), #0080FF;
+  position: relative;
+  background: url("/img/new-year-bg.png") #F9FAFF;
   background-repeat: no-repeat;
-  background-position: top, bottom;
-  background-size: contain, contain;
+  background-position: center right calc(1vh - 230px);
+  background-size: contain;
   margin: 10px;
   border-radius: 20px;
+  z-index: 1;
+}
+.christmas-section::before {
+  position: absolute;
+  top: -100px;
+  right: -10px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 750px;
+  background-image: url("/img/bg-2.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  z-index: 2;
+}
+
+.christmas-section__lst {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 26px;
+  max-width: 490px;
 }
 
 .christmas-section__title {
-  font-size: clamp(1.25rem, 0.44rem + 3.47vw, 3.13rem);
-  margin-bottom: 30px;
+  font-size: clamp(1.13rem, 0.53rem + 2.54vw, 2.5rem);
 }
 
-.new-year__list {
-  list-style: none;
-  padding: 0;
+.christmas-section__description,
+.christmas-section__title {
+  margin-bottom: 25px;
 }
 
-.new-year__title {
-  color: #47DFC5;
-  font-size: clamp(1rem, 0.62rem + 1.62vw, 1.88rem);
+.christmas-section__description {
+  font-size: clamp(1rem, 0.95rem + 0.23vw, 1.13rem);
+  color: #6A6A6A;
 }
 
-.new-year__offer {
-  margin-bottom: 20px;
-}
-
-.new-year__description {
-  max-width: 500px;
-  margin-inline: auto;
-  margin-bottom: 40px;
-}
-
-.new-year__title {
-  margin-bottom: 40px;
-}
-
-.new-year__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 450px;
-  margin-inline: auto;
-  margin-bottom: 60px;
-}
-
-.new-year__item {
+.christmas-section__item {
   display: grid;
-  grid-template-columns: 30px 1fr;
+  grid-template-columns: 32px 1fr;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 
-.new-year__header {
-  margin-bottom: 35%;
+.christmas-section__img-container {
+  filter: drop-shadow(0px 4px 10px rgba(71, 223, 197, 0.3));
 }
 
+.christmas-section__offer {
+  color: #1C1C1C;
+}
+
+@media (max-width: 1198px) {
+  .christmas-section__title {
+    font-size: 30px;
+  }
+  .christmas-section__description {
+    font-size: 1rem;
+  }
+  .christmas-section {
+    background-position: center right -240px;
+  }
+  .christmas-section__image {
+    max-width: 80%;
+    display: block;
+    height: auto;
+  }
+  .christmas-section__offer {
+    max-width: 340px;
+  }
+  .christmas-section::before {
+    right: -80px;
+  }
+}
+@media (max-width: 991.98px) {
+  .christmas-section__title {
+    font-size: clamp(1.13rem, 0.53rem + 2.54vw, 2.5rem);
+  }
+  .christmas-section__description {
+    font-size: clamp(1rem, 0.95rem + 0.23vw, 1.13rem);
+    color: #6A6A6A;
+  }
+  .christmas-section {
+    position: relative;
+    background: url("/img/new-year-bg-991.png") #F9FAFF;
+    background-repeat: no-repeat;
+    background-position: center top -100px;
+    background-size: contain;
+  }
+  .christmas-section::before {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 750px;
+    background-image: url("/img/bg-2-991.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    z-index: 2;
+  }
+  .christmas-section__image {
+    display: block;
+    margin-inline: auto;
+    margin-top: calc(2vw + 30%);
+  }
+}
+@media (max-width: 575.98px) {
+  .christmas-section {
+    background-position: center top;
+    background-size: contain;
+  }
+  .christmas-section__image {
+    margin-top: 0;
+  }
+}
 @media (max-width: 575.98px) {
   .section-padding {
     padding: 50px 0;
   }
-  .new-year__list {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .christmas-section__header {
+    text-align: center;
   }
-  .new-year__wrapper {
+  .christmas-section__wrapper {
     display: grid;
     grid-template-columns: 1fr;
+    text-align: center;
+    max-width: 180px;
+    margin-inline: auto;
     gap: 10px;
-    max-width: 200px;
-    margin: 0 auto;
   }
-  .new-year__description,
-.new-year__title {
-    margin-bottom: 20px;
+  .christmas-section__lst {
+    justify-items: center;
   }
 }
 @media (max-width: 375px) {
-  .new-year__header {
-    margin-bottom: 80px;
+  .christmas-section::before {
+    top: -50px;
   }
 }/*# sourceMappingURL=styles.css.map */
