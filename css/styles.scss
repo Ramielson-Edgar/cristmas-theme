@@ -100,7 +100,7 @@ h3,
 .christmas-section {
 
     position: relative;
-    background: url('/img/new-year-bg.png') $blue-200;
+    background: url('../img/new-year-bg.png') $blue-200;
     background-repeat: no-repeat;
     background-position: center right calc(1vh - 230px);
     background-size: contain;
@@ -120,7 +120,7 @@ h3,
         width: 100%;
         height: 750px;
 
-        background-image: url('/img/bg-2.png');
+        background-image: url('../img/bg-2.png');
         background-repeat: no-repeat;
         background-position: top right;
         background-size: contain;
@@ -216,7 +216,7 @@ h3,
 
     .christmas-section {
         position: relative;
-        background: url('/img/new-year-bg-991.png') $blue-200;
+        background: url('../img/new-year-bg-991.png') $blue-200;
         background-repeat: no-repeat;
         background-position: center top -100px;
         background-size: contain;
@@ -234,7 +234,7 @@ h3,
         width: 100%;
         height: 750px;
 
-        background-image: url('/img/bg-2-991.png');
+        background-image: url('../img/bg-2-991.png');
         background-repeat: no-repeat;
         background-position: center top;
         background-size: contain;
