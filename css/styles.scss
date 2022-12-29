@@ -34,7 +34,7 @@ h3,
 }
 
 
-.christmas-section__innner,
+.christmas-section__inner {padding:50px 0;}
 .section-padding {
     padding: 50px 0;
 }
@@ -99,7 +99,7 @@ h3,
 
 }
 
-.christmas-section__innner {
+.christmas-section__inner {
     overflow: hidden;
 }
 
@@ -185,7 +185,7 @@ h3,
 @media (max-width:1198px) {
 
     .christmas-section__title {
-        font-size: 27px;
+        font-size:clamp(1.13rem, calc(0.87rem + 1.09vw), 1.69rem);
     }
 
     .christmas-section__description {
@@ -245,6 +245,10 @@ h3,
 
 @media (max-width:575.98px) {
 
+    .christmas-section__inner {
+        padding: 0 0;
+    }
+
     .christmas-section__header {
         text-align: center;
     }
@@ -279,4 +283,20 @@ h3,
         right: 0;
         background-image: url('../img/bg-3-375.png');
     }
+
+    .christmas-section__inner__logo {
+        width: 100px;
+    }
+ 
+}
+
+@media (max-width:320px) {
+    .christmas-section__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
 }
