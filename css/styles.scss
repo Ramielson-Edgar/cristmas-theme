@@ -39,7 +39,9 @@ h3,
     padding: 50px 0;
 }
 
-
+%ling-default{ 
+    text-decoration: none;
+}
 
 %list-defaults {
     list-style: none;
@@ -123,7 +125,7 @@ h3,
         height: 750px;
 
 
-        background-image: url('/img/bg-3.png');
+        background-image: url('../img/bg-3.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -222,7 +224,7 @@ h3,
             height: 750px;
 
 
-            background-image: url('/img/bg-3-991.png');
+            background-image: url('../img/bg-3-991.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -275,6 +277,6 @@ h3,
     .christmas-section:before {
         top: -30%;
         right: 0;
-        background-image: url('/img/bg-3-375.png');
+        background-image: url('../img/bg-3-375.png');
     }
 }
