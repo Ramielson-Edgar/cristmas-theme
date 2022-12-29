@@ -84,7 +84,7 @@ h3,
 
 .christmas-section {
   position: relative;
-  background: url("/img/svg-bg.svg"), linear-gradient(292deg, rgb(1, 133, 255) 42%, rgb(249, 250, 255) 42%);
+  background: url("../img/svg-bg.svg"), linear-gradient(292deg, rgb(1, 133, 255) 42%, rgb(249, 250, 255) 42%);
   background-repeat: repeat-x, no-repeat;
   background-position: center right, center right;
   background-size: contain, contain;

@@ -104,7 +104,7 @@ h3,
 .christmas-section {
 
     position: relative;
-    background: url('/img/svg-bg.svg'), linear-gradient(292deg, rgba(1,133,255,1) 42%, rgba(249,250,255,1)42%);
+    background: url('../img/svg-bg.svg'), linear-gradient(292deg, rgba(1,133,255,1) 42%, rgba(249,250,255,1)42%);
     background-repeat: repeat-x, no-repeat;
     background-position: center right, center right;
     background-size: contain, contain;
@@ -317,11 +317,7 @@ h3,
 @media (max-width:375px) {
 
     
-    .christmas-section {
- 
-        
-    &::before {
+    .christmas-section::before {
         top: 0;
-    }
 }
 }
